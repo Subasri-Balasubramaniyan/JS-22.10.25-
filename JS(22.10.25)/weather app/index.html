@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Weather App</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome for weather icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+</head>
+<body>
+  <div class="weather-container">
+    <h1><i class="fa-solid fa-cloud-sun"></i> Weather App</h1>
+
+    <form id="search-form">
+      <input id="city-input" placeholder="Enter city (e.g. London)" required />
+      <button type="submit"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+    </form>
+
+    <div id="weather" class="weather-card">
+      <!-- Example static structure (filled dynamically via JS) -->
+      <!--
+      <div class="card">
+        <h2><i class="fa-solid fa-cloud-sun"></i> London</h2>
+        <p><i class="fa-solid fa-temperature-high"></i> 25°C</p>
+        <p><i class="fa-solid fa-droplet"></i> Humidity: 68%</p>
+        <p><i class="fa-solid fa-wind"></i> Wind: 10 km/h</p>
+      </div>
+      -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

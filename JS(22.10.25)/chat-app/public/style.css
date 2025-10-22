@@ -1,0 +1,99 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #edf2f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.chat-container {
+  width: 420px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2d3436;
+}
+
+#username-section {
+  display: flex;
+  gap: 10px;
+}
+
+#username {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+#join-btn {
+  background: #0984e3;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.messages {
+  height: 320px;
+  overflow-y: auto;
+  border: 1px solid #dfe6e9;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 15px 0;
+  background: #f8fbff;
+}
+
+.message {
+  margin: 6px 0;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: #dfe6e9;
+}
+
+.message .meta {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 2px;
+}
+
+.system {
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  margin: 8px 0;
+}
+
+#chat-form {
+  display: flex;
+}
+
+#msg {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #b2bec3;
+  border-radius: 8px;
+  outline: none;
+}
+
+button[type="submit"] {
+  margin-left: 8px;
+  background: #2d6cdf;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #74b9ff;
+}

@@ -1,0 +1,138 @@
+body { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #dfe9f3 0%, #ffffff 100%);
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.calc { 
+  width: 340px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.calc:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.12);
+}
+
+#display {
+  height: 70px; 
+  background:lightskyblue; 
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 30px; 
+  text-align: right; 
+  margin-bottom: 16px; 
+  display: flex;
+  align-items: center; 
+  justify-content: flex-end;
+  color: #222;
+  overflow-x: auto;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.keys { 
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button { 
+  padding: 18px; 
+  font-size: 18px; 
+  font-weight: 500;
+  border-radius: 10px;
+  border: none; 
+  cursor: pointer; 
+  background: #f7f9fc;
+  color: #333;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+}
+
+/* --- UNIQUE COLORS --- */
+
+/* Numbers */
+button{
+  background:lightblue;
+  color: black;
+}
+button:hover {
+  background:orchid;
+}
+
+/* Operators (+ - × ÷) */
+button[data-action="op"] {
+  background: plum;
+  color: black;
+  font-weight: 600;
+}
+button[data-action="op"]:hover {
+  background: linear-gradient(135deg, #ffe5b3, #ffd480);
+}
+
+/* Equals (=) */
+button[data-action="equals"] {
+  background: palevioletred;
+  color: #fff; 
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(43,124,255,0.3);
+}
+button[data-action="equals"]:hover {
+  background:pink;
+}
+
+/* Clear (C) and Delete (DEL) */
+button[data-action="clear"],
+button[data-action="delete"] {
+  background: lightcoral;
+  color:black;
+  font-weight: bold;
+}
+button[data-action="clear"]:hover,
+button[data-action="delete"]:hover {
+  background: lightcoral;
+}
+
+/* Decimal point */
+button[data-action="decimal"] {
+  background: linear-gradient(135deg, #eaf4ff, #d6e9ff);
+  color: #004d99;
+}
+button[data-action="decimal"]:hover {
+  background: linear-gradient(135deg, #d6e9ff, #c2e0ff);
+}
+
+/* Zero button spans 2 columns */
+button.zero {
+  grid-column: span 2;
+}
+
+/* Hover and active effects */
+button:hover {
+  transform: scale(1.05);
+}
+button:active {
+  transform: scale(0.95);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 400px) {
+  .calc {
+    width: 90%;
+    padding: 16px;
+  }
+  #display {
+    font-size: 24px;
+  }
+  button {
+    padding: 14px;
+    font-size: 16px;
+  }
+}

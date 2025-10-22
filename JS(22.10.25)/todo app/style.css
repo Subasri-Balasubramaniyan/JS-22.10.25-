@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+h1 {
+  margin: 0 0 20px;
+  text-align: center;
+  color: #1f2937;
+  font-size: 26px;
+  letter-spacing: 0.5px;
+}
+
+/* Form */
+#todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+#todo-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+#todo-input:focus {
+  outline: none;
+  border-color: #2b7cff;
+  box-shadow: 0 0 0 3px rgba(43, 124, 255, 0.2);
+}
+
+/* Buttons */
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #2b7cff;
+  color: white;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #1e5fd1;
+  transform: scale(1.05);
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.filter-btns button {
+  background: #f0f4fa;
+  color: #333;
+  margin-right: 8px;
+  border: 1px solid #ddd;
+}
+
+.filter-btns button.active {
+  background: #2b7cff;
+  color: white;
+}
+
+.filter-btns button:hover {
+  background: #2b7cff;
+  color: white;
+}
+
+/* Todo list */
+#todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8fafc;
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.todo:hover {
+  transform: scale(1.01);
+  background: #f0f6ff;
+}
+
+.todo.completed .title {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.title {
+  flex: 1;
+  font-size: 15px;
+  color: #222;
+  word-break: break-word;
+}
+
+/* Action buttons */
+.actions button {
+  background: #e0e7ff;
+  color: #333;
+  margin-left: 6px;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 13px;
+  transition: all 0.3s;
+}
+
+.actions button:hover {
+  background: #2b7cff;
+  color: white;
+}
+
+/* Edit input */
+.edit-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.edit-input:focus {
+  outline: none;
+  border-color: #2b7cff;
+  box-shadow: 0 0 0 2px rgba(43, 124, 255, 0.2);
+}
+
+/* Empty state */
+.empty {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-size: 15px;
+}

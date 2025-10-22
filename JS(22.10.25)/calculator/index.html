@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Calculator</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="calc">
+    <div id="display">0</div>
+    <div class="keys">
+      <button data-action="clear">C</button>
+      <button data-action="del">DEL</button>
+      <button data-action="percent">%</button>
+      <button data-action="op">/</button>
+
+      <button>7</button><button>8</button><button>9</button><button data-action="op">*</button>
+      <button>4</button><button>5</button><button>6</button><button data-action="op">-</button>
+      <button>1</button><button>2</button><button>3</button><button data-action="op">+</button>
+      <button>0</button><button data-action="dot">.</button><button data-action="equals" style="grid-column:span 2">=</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
